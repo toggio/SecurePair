@@ -4,6 +4,12 @@ Cryptographically secure pairing and communication between ESP32 boards: pair th
 
 The keys are agreed with an elliptic-curve exchange (X25519), and the messages are encrypted with AES-256-GCM. The library does not depend on the medium: it works over ESP-NOW, LoRa or anything else that moves packets, and even through a single standard red LED per board, with the [PacketLED](https://github.com/toggio/PacketLED) library.
 
+
+
+https://github.com/user-attachments/assets/b520d18d-50e8-4e21-9dd9-67349d4140c9
+
+
+
 Pairing takes a button on each board and a person who compares a short code. There is no app, no QR code, no password and no key baked into the firmware.
 
 - **Keys through light.** With [PacketLED](https://github.com/toggio/PacketLED) the same LED sends, receives and shows the code. No radio signal goes out, and to get in between, an attacker would have to reach both LEDs with its own light, in front of you. Even then, the code gives it away.
