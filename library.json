@@ -1,0 +1,28 @@
+{
+  "name": "SecurePair",
+  "version": "0.5.0",
+  "description": "Cryptographically secure pairing and communication between ESP32 boards: pair through a single standard LED with the LX.25 protocol, or over ESP-NOW and LoRa. Two boards agree on a key with X25519, the user checks that both show the same short code, then messages are encrypted with AES-256-GCM, with replay protection.",
+  "keywords": ["pairing", "encryption", "x25519", "aes-gcm", "esp-now", "lora", "led", "esp32"],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/toggio/SecurePair.git"
+  },
+  "authors": [
+    {
+      "name": "Luca Soltoggio",
+      "url": "https://www.lucasoltoggio.it",
+      "maintainer": true
+    }
+  ],
+  "license": "Apache-2.0",
+  "homepage": "https://github.com/toggio/SecurePair",
+  "frameworks": "arduino",
+  "platforms": "espressif32",
+  "headers": ["SecurePair.h", "SecurePairLed.h"],
+  "dependencies": {
+    "toggio/PacketLED": "^1.1.0"
+  },
+  "export": {
+    "exclude": ["extras"]
+  }
+}

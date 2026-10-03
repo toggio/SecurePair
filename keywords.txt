@@ -1,0 +1,101 @@
+#######################################
+# Syntax Coloring Map For SecurePair
+#######################################
+
+#######################################
+# Datatypes (KEYWORD1)
+#######################################
+
+SecurePair	KEYWORD1
+SecureLink	KEYWORD1
+PairConfig	KEYWORD1
+PairTransport	KEYWORD1
+PairStorage	KEYWORD1
+CodeDisplay	KEYWORD1
+StatusDisplay	KEYWORD1
+PairInput	KEYWORD1
+LedSink	KEYWORD1
+PacketLedTransport	KEYWORD1
+EspNowTransport	KEYWORD1
+LoRaTransport	KEYWORD1
+NvsPairStorage	KEYWORD1
+MemoryPairStorage	KEYWORD1
+Encryption	KEYWORD1
+DeviceKey	KEYWORD1
+HmacChipKey	KEYWORD1
+SendResult	KEYWORD1
+Stats	KEYWORD1
+LedDisplay	KEYWORD1
+RgbLedDisplay	KEYWORD1
+SerialCodeDisplay	KEYWORD1
+GpioLedSink	KEYWORD1
+NullStatusDisplay	KEYWORD1
+ButtonInput	KEYWORD1
+PeerId	KEYWORD1
+PeerInfo	KEYWORD1
+PairEvent	KEYWORD1
+PairResult	KEYWORD1
+PairState	KEYWORD1
+PairButton	KEYWORD1
+PairCode	KEYWORD1
+StatusPattern	KEYWORD1
+Rgb	KEYWORD1
+securepair	KEYWORD1
+
+#######################################
+# Methods and Functions (KEYWORD2)
+#######################################
+
+begin	KEYWORD2
+hasPeer	KEYWORD2
+peerCount	KEYWORD2
+peerInfo	KEYWORD2
+localId	KEYWORD2
+forget	KEYWORD2
+forgetAll	KEYWORD2
+provision	KEYWORD2
+handle	KEYWORD2
+pauseDuringPairing	KEYWORD2
+pair	KEYWORD2
+requestPairing	KEYWORD2
+confirm	KEYWORD2
+reject	KEYWORD2
+cancel	KEYWORD2
+busy	KEYWORD2
+repairWindowOpen	KEYWORD2
+closeRepairWindow	KEYWORD2
+lastResult	KEYWORD2
+onEvent	KEYWORD2
+resultText	KEYWORD2
+stateText	KEYWORD2
+send	KEYWORD2
+receive	KEYWORD2
+sync	KEYWORD2
+synced	KEYWORD2
+requireFreshness	KEYWORD2
+maxPayload	KEYWORD2
+stats	KEYWORD2
+read	KEYWORD2
+running	KEYWORD2
+end	KEYWORD2
+factoryReset	KEYWORD2
+derive	KEYWORD2
+available	KEYWORD2
+block	KEYWORD2
+encrypted	KEYWORD2
+heldAtStart	KEYWORD2
+clear	KEYWORD2
+logPairingStatus	KEYWORD2
+logPairingEvent	KEYWORD2
+logPeerId	KEYWORD2
+forRadio	KEYWORD2
+digits	KEYWORD2
+bitAt	KEYWORD2
+
+#######################################
+# Constants (LITERAL1)
+#######################################
+
+SECUREPAIR_VERSION	LITERAL1
+IfAvailable	LITERAL1
+Required	LITERAL1
