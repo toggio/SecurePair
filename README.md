@@ -119,13 +119,15 @@ The protocol has not yet been reviewed by an independent cryptographer. [PROTOCO
 
 ## Installation
 
-In the Arduino IDE, install PacketLED (and LoRa, if you need it) from the Library Manager. Then download this repository as a ZIP file and add it with *Sketch > Include Library > Add .ZIP Library*.
+In the Arduino IDE, open the Library Manager, search for **SecurePair** and click *Install*. The IDE offers to install PacketLED with it; add LoRa too if you need it.
 
 With PlatformIO, add the library to `platformio.ini`; PacketLED comes with it:
 
 ```ini
-lib_deps = https://github.com/toggio/SecurePair.git
+lib_deps = toggio/SecurePair
 ```
+
+You can also download the repository as a ZIP file and add it with *Sketch > Include Library > Add .ZIP Library*.
 
 ## Usage
 
