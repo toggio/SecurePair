@@ -1,0 +1,60 @@
+name: CI
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  lint:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: arduino/arduino-lint-action@v2
+        with:
+          # "update" once the library is in the Library Manager index
+          library-manager: submit
+          compliance: strict
+
+  compile:
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          # No HMAC peripheral on the original ESP32: ChipKeySetup is left out.
+          - fqbn: esp32:esp32:esp32
+            sketches: |
+              - examples/CryptoSelfTest
+              - examples/EspNowOnly
+              - examples/EspNowPairLoRaLink
+              - examples/LedOnly
+              - examples/LedPairEspNowLink
+              - examples/LedPairLoRaLink
+              - examples/Provisioning
+          - fqbn: esp32:esp32:esp32c3
+            sketches: |
+              - examples
+          # WaveshareC3Zero is for the ESP32-C3 only.
+          - fqbn: esp32:esp32:esp32c6
+            sketches: |
+              - examples/ChipKeySetup
+              - examples/CryptoSelfTest
+              - examples/EspNowOnly
+              - examples/EspNowPairLoRaLink
+              - examples/LedOnly
+              - examples/LedPairEspNowLink
+              - examples/LedPairLoRaLink
+              - examples/Provisioning
+    steps:
+      - uses: actions/checkout@v4
+      - uses: arduino/compile-sketches@v1
+        with:
+          fqbn: ${{ matrix.fqbn }}
+          platforms: |
+            - name: esp32:esp32
+              source-url: https://espressif.github.io/arduino-esp32/package_esp32_index.json
+          libraries: |
+            - source-path: ./
+            - name: PacketLED
+            - name: LoRa
+          sketch-paths: ${{ matrix.sketches }}
